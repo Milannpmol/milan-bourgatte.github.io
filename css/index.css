@@ -1,0 +1,663 @@
+   :root {
+       --accent: #4ade80;
+   }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #000;
+    background-image: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 55%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar {
+    background: transparent;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    font-size: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background:rgba(0,0,0,.7);
+    backdrop-filter: blur(5px);
+}
+
+.navbar ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+    color: grey;
+    opacity: 0.7;
+}
+
+.navbar-center a {
+ padding: 0px 10px 0px 10px;
+}
+
+.navbar-right img {
+    width: 30px;
+    padding-right: 10px;
+}
+
+.haut-page {
+    min-height: 90vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#phaut {
+    width: 1000px;
+    margin: 20px auto ;
+    margin-bottom: 60px;
+
+}
+
+
+:target {
+    scroll-margin-top: 80px;
+}
+
+.haut-page h1 {
+    overflow: hidden;
+  border-right: .15em solid #4ade80;
+  font-size: 50px;
+  width: 0;
+        white-space: nowrap; 
+    animation: 
+      typing 1s steps(20, end) forwards,
+      blink .8s infinite;
+    font-family: 'emotion-engine', sans-serif;
+}
+
+#titre {
+  display: inline-block;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 480px }
+}
+
+@keyframes blink {
+  from { border-color: transparent }
+  to { border-color: #4ade80; }
+}
+
+#APropos {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.colonne {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 40px;
+}
+
+.profile-block {
+    flex: 1;
+    text-align: center;
+    max-width: 500px;
+    padding: 0 40px;   
+}
+
+.profile-block + .profile-block {
+    border-left: 1px solid #404040;
+}
+
+.profile-block h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.profile-block p {
+    color: #a0a0a0;         
+    font-size: 20px;
+    line-height: 1.6;
+
+}
+
+
+
+
+
+#command_top_style {
+    background-color: #181818;
+    width: 200px;
+    margin-inline: auto;
+    font-size: 35px;
+    border: 1px solid #404040;
+}
+
+
+.cascadia {
+  font-family: "Cascadia Code", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: normal;
+    
+}
+
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #b6b6b6;
+}
+
+
+
+.timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, #ffffff, #404040 70%, transparent);
+}
+
+.tl-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* Point avec halo */
+.tl-item::before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 3px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.12);
+    z-index: 1;
+}
+
+.tl-date {
+    display: block;
+    font-family: "Cascadia Code", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.tl-item h3 {
+    margin: 0 0 4px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.tl-place {
+    display: block;
+    font-size: 15px;
+    color: #707070;
+    margin-bottom: 12px;
+}
+
+.tl-item p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #a0a0a0;
+}
+
+
+.timeline-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 200px auto 80px;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.timeline-section {
+    flex: 1;
+    max-width: 500px;      
+    min-width: 0;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+@media (max-width: 900px) {
+    .timeline-row {
+        flex-direction: column;
+    }
+}
+
+
+
+.card header {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+#competence {
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.competences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;                             
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    border: 1px solid grey;
+    border-radius: 12px;
+    padding: 0 20px 20px;
+    min-height: 250px;   
+    margin: 0;           
+}
+
+.card header {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 900px) {
+    .competences { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .competences { grid-template-columns: 1fr; }
+}
+
+
+.tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.tags li {
+    font-family: "Cascadia Code", monospace;
+    font-size: 13px;
+    color: #b6b6b6;
+    background-color: #181818;
+    border: 1px solid #404040;
+    border-radius: 999px;      
+    padding: 5px 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+.tags li:hover {
+    color: white;
+    border-color: #ffffff;
+}
+
+
+.projets {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.projets h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.projets .liste {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 700px) {
+    .projets .liste { grid-template-columns: 1fr; }
+}
+
+
+.button {
+    background-color: #181818;
+    color: white;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+    border-color: white;
+    opacity: 0.8;
+}
+
+.card_projet {
+    border: 1px solid grey;
+    border-radius: 12px;
+    padding: 0 20px 20px;
+    min-height: 250px;   
+    margin: 0;   
+}
+
+.card_projet header {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.contact {
+    align-items: center;
+    text-align: center;
+}
+
+
+#APropos::before,
+#competence::before,
+.projets h2::before,
+.contact h2::before,
+.timeline-section h2::before {
+    content: "#";
+    margin-right: .4em;
+    font-family: "Cascadia Code", monospace;
+    color: var(--accent);
+}
+
+
+.card, .card_projet {
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.card:hover, .card_projet:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 30px rgba(74, 222, 128, 0.08);
+}
+
+
+.navbar-center a { position: relative; }
+
+.navbar-center a::after {
+    content: '';
+    position: absolute;
+    left: 10px; right: 10px; bottom: -4px;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transition: transform .25s ease;
+}
+
+.navbar-center a:hover::after { transform: scaleX(1); }
+
+.logo {
+    font-family: "Cascadia Code", monospace;
+    font-weight: 700;
+    padding-left: 15px;
+}
+
+.logo span {
+    color: var(--accent);
+    animation: cursor .8s infinite;
+}
+
+@keyframes cursor { 50% { opacity: 0; } }
+
+
+.btn {
+    display: inline-block;
+    background: #181818;
+    color: white;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 6px;
+    transition: all .2s ease;
+}
+
+.btn:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.btn-primary { background: white; color: black; }
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+
+.hero-buttons { margin-top: 30px; }
+.tags-center { justify-content: center; }
+
+
+.projets .liste article:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+
+.reveal { opacity: 0; }
+.reveal.visible { opacity: 1; animation: fadeUp .6s ease; }
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: none; }
+}
+
+
+.contact { padding: 120px 20px 60px; }
+
+footer {
+    border-top: 1px solid #404040;
+    text-align: center;
+    padding: 24px;
+    color: #707070;
+    font-family: "Cascadia Code", monospace;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   VERSION MOBILE
+   Tout ce qui suit ne s'applique que sur petit écran,
+   l'affichage sur ordinateur reste identique.
+   ===================================================== */
+
+/* Bouton burger : caché sur ordinateur */
+.burger {
+    display: none;
+    background: none;
+    color: white;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    font-size: 22px;
+    line-height: 1;
+    padding: 6px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* ---------- Tablette et mobile ---------- */
+@media (max-width: 900px) {
+
+    /* Navbar : les liens passent dans le menu burger */
+    .burger { display: inline-block; }
+
+    .navbar-right { display: flex; align-items: center; }
+    .navbar-right a { display: flex; }
+
+    .navbar-left { padding: 14px 0; }
+    .navbar-left ul { margin: 0; padding: 0; }
+
+    .navbar-center {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        border-bottom: 1px solid #404040;
+    }
+
+    .navbar-center.open { display: block; }
+
+    .navbar-center ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-center a {
+        display: block;
+        padding: 14px 20px;
+    }
+
+    .navbar-center a::after { display: none; }
+
+    /* Formation / Expérience : empilées et centrées */
+    .timeline-row {
+        align-items: center;
+        gap: 40px;
+        margin: 80px auto 40px;
+        padding: 0 24px;
+    }
+
+    .timeline-section {
+        flex: none;
+        width: 100%;
+    }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+
+    .navbar { font-size: 18px; }
+    .navbar-right img { width: 26px; padding-right: 8px; }
+
+    /* Haut de page */
+    .haut-page { padding: 40px 16px; }
+
+    #command_top_style {
+        width: 150px;
+        font-size: 26px;
+    }
+
+    .haut-page h1 { font-size: 28px; }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 270px }
+    }
+
+    .haut-page h2 {
+        font-size: 17px;
+        line-height: 1.5;
+        max-width: 100%;
+    }
+
+    /* À propos : les deux blocs s'empilent */
+    #APropos { font-size: 30px; }
+
+    .colonne {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+
+    .profile-block {
+        flex: none;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    .profile-block + .profile-block {
+        border-left: none;
+        border-top: 1px solid #404040;
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+
+    .profile-block h3 { font-size: 20px; }
+    .profile-block p { font-size: 17px; }
+
+    /* Titres et cartes */
+    .timeline-section h2 { font-size: 28px; }
+
+    #competence,
+    .projets h2 { font-size: 30px; }
+
+    .card,
+    .card_projet { min-height: 0; }
+
+    /* Contact */
+    .contact { padding: 70px 16px 40px; }
+}
+
+/* ---------- Très petits écrans ---------- */
+@media (max-width: 380px) {
+
+    .haut-page h1 { font-size: 25px; }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 240px }
+    }
+
+    .navbar-right img { width: 22px; padding-right: 6px; }
+}
